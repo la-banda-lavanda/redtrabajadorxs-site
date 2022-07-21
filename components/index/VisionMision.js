@@ -1,12 +1,12 @@
-import *as React from 'react';
+import React from 'react';
 
-import {Box,Typography,Container}from '@mui/material';
+import { Box, Typography, Container }from '@mui/material';
 import Image from 'next/image'
-import img1 from '../pages/img/imagen1.png'
+import img1 from '../../pages/img/imagen1.png'
 
 
 
-export default function vision_mision() {
+export default function VisionMision() {
 
    
    
@@ -33,7 +33,7 @@ export default function vision_mision() {
 
                 
              <Container sx={{mt:14 ,mb:20}}>
-                <Typography   aling="center  " >
+                <Typography   aling="center  " variant='body1'>
             Organizamos para garantizar el ejercicio efectivo de los
             Derechos Humanos Laborales (DDHHL) y atender situaciones 
             de desigualdad y relaciones inequitativas basadas en raza,
@@ -56,12 +56,12 @@ export default function vision_mision() {
             
                 <Box>
 
-                    <image
+                    <Image
             src={img1}
             width={400}
                 height={300} 
 
-            s/>
+            />
                 </Box>
                 <Container>
                     <Typography>
