@@ -19,12 +19,9 @@ export default function VisionMision() {
             sx={{display: 'inline-flex'}}
             
             >
-                
-                    <Image
-                src={img1}
-                width={400}
-                height={300} 
-            />
+                <Box width='300px'>
+                    <Image src={img1} layout='intrinsic'/>
+                </Box>
                
                  
            
