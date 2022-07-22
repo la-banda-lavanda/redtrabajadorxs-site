@@ -3,8 +3,7 @@ import { Box, Typography} from '@mui/material';
 import Image from 'next/image'
 import img1 from '../../pages/img/imagen1.png'
 import img2 from '../../pages/img/img2.png'
-import img3 from '../../pages/img/img3.png'
-import img4 from '../../pages/img/img4.jpg'
+
 
 export default function VisionMision() {
 
@@ -12,23 +11,25 @@ export default function VisionMision() {
     return (
 
 
-        <Box color="primary.dark" sx={{ flexGrow: 1  }} >
-            <main>
+        <Box color="primary.dark" sx={{ flexGrow: 1  }}>
 
             
 
             <Box sx={{
-            minHeight: '87vh',
             display: 'flex',
-            alignItems: 'center',
-            background: '#ffff'
+            alignItems: 'center'
             }}>
-                <Box sx={{ minHeight: '20%' }} display='flex' flexWrap='wrap' >
-                    <Box minHeight='50px' width='5%' sx={{ p:4, justifycontent: "flex-end", minWidth: '250px', flexWrap: 'wrap' }}>
-                        <Image src={img1} />
+                <Box display='flex' width='50%' justifyContent='center'>
+                    <Box width='100%' sx={{  minWidth: '200px' }} backgroundColor='black'>
+                        <Image src={img1} layout='responsive'/>
                     </Box>
-                    <Box p={{ xs: 2, sm: 3, md: 4 }}>
-                        <Typography aling="center  " variant='body1' >
+                </Box>
+                    
+                    <Box  width='50%'>
+
+                    
+                    <Box>
+                        <Typography aling="center" variant='body1' sx={{ px: 3 }}>
                             Organizamos para garantizar el ejercicio efectivo de los
                             Derechos Humanos Laborales (DDHHL) y atender situaciones
                             de desigualdad y relaciones inequitativas basadas en raza,
@@ -45,9 +46,9 @@ export default function VisionMision() {
                             trabajo y fomentar un mundo con más justicia social.
                         </Typography>
                     </Box>
-                </Box>
+                    </Box>
             </Box>
-            </main>
+          
             <Box sx={{ backgroundColor: '#ffffff' }}>
                 <Box mt={2}
                     sx={{ display: 'inline-flex' }} alignItems='center' >
@@ -75,24 +76,7 @@ export default function VisionMision() {
                     </Box>
                 </Box>
             </Box>
-            <Box sx={{ display: 'flex', background: '#000000' }} >
-                <Box sx={{ display: 'flex' }} >
-                    <Typography color="primary" variant="h3" xs ={12 } sx={{ p: 5  }}>
-                        RED
-                    </Typography>
-                    <Image
-                        src={img3}
-                        width={65}
-                        height={35}
-                    />
-                    <Box >
-                    <Typography color="primary" variant="h3" xs ={12 } sx={{ p: 5  }} > 
-                        LABANDA
-                    </Typography>   
-                    </Box>
-                    
-                </Box>
-            </Box>
+      
         </Box>
     );
 
