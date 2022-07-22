@@ -5,8 +5,9 @@ import img1 from '../../pages/img/imagen1.png'
 import img2 from '../../pages/img/img2.png'
 
 
-export default function VisionMision() {
+export default function VisionMision(props) {
 
+    const { mobile } = props
 
     return (
 
@@ -17,19 +18,21 @@ export default function VisionMision() {
 
             <Box sx={{
             display: 'flex',
-            alignItems: 'center'
+            alignItems: 'center',
+            flexWrap: 'wrap'
             }}>
-                <Box display='flex' width='50%' justifyContent='center'>
-                    <Box width='100%' sx={{  minWidth: '200px' }} backgroundColor='black'>
+                <Box display='flex' width={mobile ? '100%' : '50%'} justifyContent='center'>
+                    <Box width={mobile ? '70%' : '100%'} sx={{  minWidth: '200px' }} backgroundColor='black'>
                         <Image src={img1} layout='responsive'/>
                     </Box>
                 </Box>
                     
-                    <Box  width='50%'>
+                    <Box  width={mobile ? '100%' : '50%'} >
 
                     
                     <Box>
-                        <Typography aling="center" variant='body1' sx={{ px: 3 }}>
+                        <Typography variant={mobile ? 'h2' : 'h1'} align='center'>VISIÓN</Typography>
+                        <Typography aling="center" variant={mobile ? 'body1' : 'h6'} sx={{ px: 3 }}>
                             Organizamos para garantizar el ejercicio efectivo de los
                             Derechos Humanos Laborales (DDHHL) y atender situaciones
                             de desigualdad y relaciones inequitativas basadas en raza,

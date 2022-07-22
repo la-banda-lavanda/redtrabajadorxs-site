@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import VisionMision from '../components/index/VisionMision';
 import Denuncias from '../components/index/denuncias'
 import { AppBar, Box, Typography, Toolbar, List, ListItem, ListItemText } from '@mui/material';
@@ -8,6 +8,24 @@ import Image from 'next/image'
 
 export default function Home() {
 
+    const [mobile, setMobile] = useState()
+
+    useEffect(() => {
+        const width = (window.innerWidth > 0) ? window.innerWidth : window.screen.width;
+
+        setMobile(width < 900)
+
+        const handleChangeWindowSize = (event) => {
+            const width = (window.innerWidth > 0) ? window.innerWidth : window.screen.width;
+            setMobile(width < 900)
+        }
+
+        window.addEventListener('resize', handleChangeWindowSize)
+
+        return () => {
+            window.removeEventListener('resize', handleChangeWindowSize)
+        };
+    }, [])
 
     return (
         <Box>
@@ -49,9 +67,7 @@ export default function Home() {
                     </List>
                 </Toolbar>
             </AppBar>
-            <div>
-            <VisionMision/>
-            </div>
+            <VisionMision mobile={mobile}/>
             <Box sx={{ display: 'flex', background: '#000000' }} >
                 <Box sx={{ display: 'flex' }} >
                     <Typography color="primary" variant="h3" xs ={12 } sx={{ p: 5  }}>
