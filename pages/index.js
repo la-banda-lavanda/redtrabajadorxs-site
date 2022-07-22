@@ -1,27 +1,60 @@
 import * as React from 'react';
-import Divider from '@mui/material/Divider';
 import VisionMision from '../components/index/VisionMision';
+import Denuncias from '../components/index/denuncias'
+import { AppBar, Box, Typography, Toolbar, List, ListItem, ListItemText } from '@mui/material';
 
 
 export default function Home() {
-  const content = (
-    <div>
-      {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id dignissim justo.
-   Nulla ut facilisis ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-   Sed malesuada lobortis pretium.`}
-    </div>
-  );
 
-  return (
-    <div>
-        <Divider orientation="vertical" flexItem>
-            VERTICAL
-        </Divider>
-        <VisionMision />
-    </div>
-     
-      
-      
-  
-  );
+
+    return (
+        <Box>
+            <AppBar position="static">
+
+                <Toolbar variant="dense" sx={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignContent: 'center',
+                    height: 100
+                }}>
+
+                    <Typography variant="h4" sx={{ mx: 1, fontWeight: 'bold' }}>
+                        RED
+                    </Typography>
+
+
+
+
+                    <List
+                        component="nav"
+                        sx={{ display: 'flex' }}
+                    >
+                        <ListItem button>
+                            <ListItemText primary="Inicio" color='secondary' variant="h1" />
+                        </ListItem>
+                        <ListItem button>
+                            <ListItemText primary="¿QUIENES SOMOS?" color='secondary' />
+                        </ListItem>
+                        <ListItem button>
+                            <ListItemText primary="TESTIMONIOS       " color='secondary' />
+                        </ListItem>
+                        <ListItem button>
+                            <ListItemText primary="DENUNCIAS" color='secondary' />
+                        </ListItem>
+                        <ListItem button>
+                            <ListItemText primary="VISIÓN & MISIÓN" color='secondary' />
+                        </ListItem>
+                    </List>
+                </Toolbar>
+            </AppBar>
+            <div>
+            <VisionMision/>
+            </div>
+        </Box>
+
+
+
+
+
+    );
 }
