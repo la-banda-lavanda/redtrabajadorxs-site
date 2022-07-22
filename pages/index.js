@@ -67,6 +67,7 @@ export default function Home() {
                     </List>
                 </Toolbar>
             </AppBar>
+            
             <VisionMision mobile={mobile}/>
             <Box sx={{ display: 'flex', background: '#000000' }} >
                 <Box sx={{ display: 'flex' }} >

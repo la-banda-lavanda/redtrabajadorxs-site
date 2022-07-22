@@ -10,9 +10,10 @@ export default function VisionMision(props) {
     const { mobile } = props
 
     return (
+<Box display='flex' justifyContent='center' sx={{ backgroundColor: '#ffffff' }}>
+                <Box maxWidth='1200px' width='100%'>
 
-
-        <Box color="primary.dark" sx={{ flexGrow: 1  }}>
+      
 
             
 
@@ -31,7 +32,7 @@ export default function VisionMision(props) {
 
                     
                     <Box>
-                        <Typography variant={mobile ? 'h2' : 'h1'} align='center'>VISIÓN</Typography>
+                        <Typography variant={mobile ? 'h2' : 'h1'} align='center' color="primary.dark" >VISIÓN</Typography>
                         <Typography aling="center" variant={mobile ? 'body1' : 'h6'} sx={{ px: 3 }}>
                             Organizamos para garantizar el ejercicio efectivo de los
                             Derechos Humanos Laborales (DDHHL) y atender situaciones
@@ -52,7 +53,7 @@ export default function VisionMision(props) {
                     </Box>
             </Box>
           
-            <Box sx={{ backgroundColor: '#ffffff' }}>
+            <Box>
                 <Box mt={2}
                     sx={{ display: 'inline-flex' }} alignItems='center' >
                     <Box>
@@ -80,6 +81,8 @@ export default function VisionMision(props) {
                 </Box>
             </Box>
       
+
+        </Box>
         </Box>
     );
 
